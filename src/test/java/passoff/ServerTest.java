@@ -102,13 +102,9 @@ public class ServerTest {
     public void testValidNewRegister(TestInfo testInfo) {
         printTestName(testInfo);
         try {
-            //We are calling the register api for a user named sheila
             RegisterResult result = proxy.register(host, port, registerRequest);
-            //This is a valid api call, so the headers sent should be HTTP_OK (200)
             assertHTTP_OK();
-            //Checks to see if registerResult has an authtoken String
             assertNotNull(result.getAuthtoken(), "authtoken was null OR its variable name did not match that of the expected JSon (see API)");
-            //Checks to see if you filled registerResult with an authtoken String
             assertNotEquals(EMPTY_STRING, result.getAuthtoken(), "authtoken was empty string, expected non-empty authtoken string");
             //Checks to see if registerResult has a personID String
             assertNotNull(result.getPersonID(), "personID was null OR its variable name did not match that of the expected JSon (see API)");

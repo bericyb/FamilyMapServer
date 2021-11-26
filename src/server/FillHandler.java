@@ -14,6 +14,8 @@ import java.net.HttpURLConnection;
 
 public class FillHandler implements HttpHandler {
     public void handle(HttpExchange exchange) throws IOException {
+
+        System.out.println("In fill handler");
         boolean success = false;
 
 

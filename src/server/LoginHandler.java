@@ -13,6 +13,7 @@ import java.net.HttpURLConnection;
 
 public class LoginHandler extends MyHandler {
     public void handle(HttpExchange exchange) throws IOException {
+        System.out.println("In Login handler");
         boolean success = false;
 
         try {

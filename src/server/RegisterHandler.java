@@ -14,6 +14,7 @@ import java.net.HttpURLConnection;
 public class RegisterHandler extends MyHandler {
 
     public void handle(HttpExchange exchange) throws IOException {
+        System.out.println("In Registration Handler");
         boolean success = false;
         try {
             if (exchange.getRequestMethod().toLowerCase().equals("post")) {

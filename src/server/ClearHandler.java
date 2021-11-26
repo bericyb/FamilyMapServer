@@ -12,6 +12,8 @@ import java.net.HttpURLConnection;
 
 public class ClearHandler implements HttpHandler {
     public void handle(HttpExchange exchange) throws IOException {
+
+        System.out.println("In clear handler");
         boolean success = false;
 
         try {

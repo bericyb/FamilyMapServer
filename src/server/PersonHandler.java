@@ -15,6 +15,7 @@ import java.util.List;
 public class PersonHandler extends MyHandler {
 
     public void handle(HttpExchange exchange) throws IOException {
+        System.out.println("In Person Handler");
         boolean success = false;
         Gson myGson = new Gson();
         try {

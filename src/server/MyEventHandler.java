@@ -17,7 +17,7 @@ public class MyEventHandler extends MyHandler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
-
+        System.out.println("In Event handler");
         boolean success = false;
         Gson myGson = new Gson();
         try {

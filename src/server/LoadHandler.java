@@ -20,6 +20,8 @@ import java.net.HttpURLConnection;
 
 public class LoadHandler extends MyHandler {
     public void handle(HttpExchange exchange) throws IOException {
+
+        System.out.println("In load handler");
         boolean success  = false;
         try {
             if (exchange.getRequestMethod().toLowerCase().equals("post")) {
